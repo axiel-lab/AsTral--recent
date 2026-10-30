@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — Node Not Found · ASTRAL</title>
+  <meta name="description" content="The requested Discord coordinate or page could not be located in the cluster.">
+  <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+  <a class="skip-to-content" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="./index.html" aria-label="Astral Home">
+        <img src="./assets/img/astral-logo.svg" alt="Astral">
+      </a>
+      <nav class="nav-desktop">
+        <a class="nav-link" href="./index.html">Index</a>
+        <a class="nav-link" href="./services.html">Services</a>
+        <a class="nav-link" href="./work.html">Selected Work</a>
+        <a class="nav-link" href="./process.html">Process</a>
+        <a class="nav-link" href="./pricing.html">Pricing</a>
+        <a class="nav-link" href="./about.html">About</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div class="cloudflare-badge" title="Edge Protected by Cloudflare Global Anycast WAF">
+          <span class="cf-status-pulse"></span>
+          <span>Cloudflare Shield 100%</span>
+        </div>
+        <a class="header-cta" href="./contact.html">
+          <span>Start a Project</span>
+          <span class="icon-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" style="min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 120px 20px 60px;">
+    <div class="container" style="text-align: center; max-width: 620px;">
+      <div class="eyebrow" style="justify-content: center;">
+        <span class="dot" style="background: #ef4444; box-shadow: 0 0 8px rgba(239, 68, 68, 0.6);"></span>
+        <span>Gateway Exception · Code 404</span>
+      </div>
+      <h1 class="section-title" style="font-size: clamp(48px, 7vw, 96px); font-family: var(--font-display); letter-spacing: -0.04em;">
+        404
+      </h1>
+      <p class="lead" style="margin: 0 auto 32px;">
+        The requested coordinate or shard does not exist in our route table. The channel may have been pruned or moved.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <a class="btn btn-primary" href="./index.html">
+          <span>Return to Index</span>
+          <span class="icon-arrow">→</span>
+        </a>
+        <a class="btn btn-secondary" href="./work.html">
+          <span>Explore Selected Work</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Complete Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© <span class="dynamic-year">2026</span> Astral. All rights reserved.</div>
+        <div>Engineered with Three.js & Modern Web Standards · Bangladesh & Global</div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initNavigation } from './src/components/navigation.js';
+    import { initMotionSystem } from './src/components/motion.js';
+
+    initNavigation();
+    initMotionSystem();
+  </script>
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ASTRAL — High-Reliability Discord Systems & Automation</title>
+  <meta name="description" content="Astral designs and develops custom Discord bots, resilient automation, moderation systems, and community infrastructure.">
+  <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+  <a class="skip-to-content" href="#main">Skip to content</a>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="./index.html" aria-label="Astral Home">
+        <img src="./assets/img/astral-logo.svg" alt="Astral">
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a class="nav-link" href="./index.html">Index</a>
+        <a class="nav-link" href="./services.html">Services</a>
+        <a class="nav-link" href="./work.html">Selected Work</a>
+        <a class="nav-link" href="./process.html">Process</a>
+        <a class="nav-link" href="./pricing.html">Pricing</a>
+        <a class="nav-link" href="./about.html">About</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div class="cloudflare-badge" title="Edge Protected by Cloudflare Global Anycast WAF">
+          <span class="cf-status-pulse"></span>
+          <span>Cloudflare Shield 100%</span>
+        </div>
+        <a class="header-cta" href="./contact.html">
+          <span>Start a Project</span>
+          <span class="icon-arrow">→</span>
+        </a>
+        <button class="mobile-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <a class="nav-link" href="./index.html">Index</a>
+    <a class="nav-link" href="./services.html">Services</a>
+    <a class="nav-link" href="./work.html">Selected Work</a>
+    <a class="nav-link" href="./process.html">Process</a>
+    <a class="nav-link" href="./pricing.html">Pricing</a>
+    <a class="nav-link" href="./about.html">About</a>
+    <a class="btn btn-primary" href="./contact.html" style="margin-top: 20px;">Start a Project →</a>
+  </div>
+
+  <main id="main">
+    <!-- Hero Section (Asymmetric Editorial Composition) -->
+    <section class="section-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow">
+            <span class="dot"></span>
+            <span>Bespoke Discord Infrastructure · Studio 2026</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Architected for communities that demand <span class="serif-italic">precision</span> over off-the-shelf bots.
+          </h1>
+
+          <p class="lead">
+            Astral designs purpose-built Discord bots, fail-safe automation pipelines, and community infrastructure engineered around your server's exact operational reality.
+          </p>
+
+          <div style="display: flex; gap: 16px; align-items: center; margin-top: 32px; flex-wrap: wrap;">
+            <a class="btn btn-primary" href="./contact.html">
+              <span>Initiate Project Scope</span>
+              <span class="icon-arrow">→</span>
+            </a>
+            <a class="btn btn-secondary" href="./work.html">
+              <span>Inspect Selected Work</span>
+            </a>
+          </div>
+
+          <!-- Hero Telemetry Strip -->
+          <div class="hero-meta-strip">
+            <div class="hero-meta-item">
+              <span style="color: var(--silver-bright); font-weight: 600;">GATEWAY 100%</span>
+              <span>REST & WebSocket</span>
+            </div>
+            <div class="hero-meta-item">
+              <span style="color: var(--silver-bright); font-weight: 600;">ISOLATED</span>
+              <span>Dedicated Container Shards</span>
+            </div>
+            <div class="hero-meta-item">
+              <span style="color: var(--accent-ice); font-weight: 600;">STATUS</span>
+              <span>Accepting Q4 Builds</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Interactive Sculpture Viewport -->
+        <div style="position: relative; width: 100%; height: 540px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: radial-gradient(circle at 50% 50%, #11141c 0%, #08090b 100%);">
+          <canvas id="hero-3d-canvas" class="webgl-canvas"></canvas>
+          
+          <!-- Interactive 3D Controls -->
+          <div style="position: absolute; top: 18px; left: 18px; z-index: 10;">
+            <div class="scene-toolbar" style="flex-wrap: wrap;">
+              <button type="button" class="control-pill" id="btn-toggle-explode">
+                <span class="pill-dot"></span> Exploded View
+              </button>
+              <button type="button" class="control-pill" id="btn-trigger-pulse">
+                <span class="pill-dot"></span> Resonance Pulse
+              </button>
+              <button type="button" class="control-pill" id="btn-trigger-surge">
+                <span class="pill-dot"></span> Orbital Surge
+              </button>
+              <button type="button" class="control-pill" id="btn-trigger-align">
+                <span class="pill-dot"></span> Planar Align
+              </button>
+            </div>
+          </div>
+
+          <div class="canvas-hint">
+            <span>● Drag to orient 3D Core</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section class="section" style="border-top: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header split-header">
+          <div>
+            <div class="eyebrow">Core Capabilities</div>
+            <h2 class="section-title">Built with architectural rigour.</h2>
+          </div>
+          <p style="max-width: 440px;">
+            We do not sell pre-packaged templates. Every interaction, permission layer, and database schema is crafted specifically for your community.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="arch-card">
+            <div class="card-num">SYS / 01</div>
+            <h3 class="card-title">Custom Discord Bots</h3>
+            <p class="card-body">
+              Tailored slash commands, modal workflows, contextual interactions, role management, and real-time Discord components without external clutter.
+            </p>
+            <div style="margin-top: 24px;">
+              <a href="./services.html" class="btn btn-ghost" style="padding: 0;">Explore Bot Architecture →</a>
+            </div>
+          </article>
+
+          <article class="arch-card">
+            <div class="card-num">SYS / 02</div>
+            <h3 class="card-title">Server Automation</h3>
+            <p class="card-body">
+              Automated onboarding pipelines, external API webhooks, role synchronizations, scheduled broadcasts, and background jobs that run reliably 24/7.
+            </p>
+            <div style="margin-top: 24px;">
+              <a href="./services.html" class="btn btn-ghost" style="padding: 0;">Explore Automation →</a>
+            </div>
+          </article>
+
+          <article class="arch-card">
+            <div class="card-num">SYS / 03</div>
+            <h3 class="card-title">Moderation & Security</h3>
+            <p class="card-body">
+              Raid prevention, automated quarantine, audited incident logging, staff escalation channels, and zero-compromise permission verification.
+            </p>
+            <div style="margin-top: 24px;">
+              <a href="./services.html" class="btn btn-ghost" style="padding: 0;">Explore Security →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Discord Bot Simulator Feature -->
+    <section class="section" style="background: #090b0f; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="grid-2" style="align-items: center; gap: 48px;">
+          <div>
+            <div class="eyebrow">Live System Emulation</div>
+            <h2 class="section-title">Test-drive the Astral command pipeline.</h2>
+            <p style="margin-bottom: 24px;">
+              Experience how Astral structures discord interactions: sub-30ms execution, rich contextual response embeds, resilient permission boundaries, and instant feedback.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-family: var(--font-mono); font-size: 13px; color: var(--silver); margin-bottom: 32px;">
+              <li style="display: flex; align-items: center; gap: 10px;">
+                <span style="color: var(--accent-ice);">✓</span> Zero unhandled gateway promise rejections
+              </li>
+              <li style="display: flex; align-items: center; gap: 10px;">
+                <span style="color: var(--accent-ice);">✓</span> Ephemeral security guards on staff actions
+              </li>
+              <li style="display: flex; align-items: center; gap: 10px;">
+                <span style="color: var(--accent-ice);">✓</span> Continuous automatic database state sync
+              </li>
+            </ul>
+            <a class="btn btn-secondary" href="./process.html">See Our Engineering Process →</a>
+          </div>
+
+          <div id="home-discord-simulator">
+            <!-- Populated dynamically by discordSimulator.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cloudflare Edge Security Architecture Section -->
+    <section class="section" style="border-top: 1px solid var(--border-subtle); background: radial-gradient(circle at 80% 20%, rgba(243, 128, 32, 0.03) 0%, transparent 60%);">
+      <div class="container">
+        <div class="section-header split-header">
+          <div>
+            <div class="eyebrow" style="color: #fed7aa;">
+              <span class="cf-status-pulse"></span>
+              <span>Cloudflare Enterprise Security Architecture</span>
+            </div>
+            <h2 class="section-title">Zero-compromise edge protection.</h2>
+          </div>
+          <p style="max-width: 480px;">
+            Discord bot webhooks, member portals, and REST gateways face relentless volumetric floods. Astral routes all inbound traffic through Cloudflare's Anycast edge network across 330+ cities before touching origin containers.
+          </p>
+        </div>
+
+        <div class="grid-3" style="margin-bottom: 24px;">
+          <article class="arch-card">
+            <div class="card-num" style="color: #f38020;">SECURITY // 01 · EDGE WAF</div>
+            <h3 class="card-title">Cloudflare Workers Ingress</h3>
+            <p class="card-body">
+              Incoming Discord webhooks are validated with ed25519 cryptographic signatures directly on Cloudflare Workers in &lt; 2ms, shedding 100% of forged requests at the edge.
+            </p>
+          </article>
+
+          <article class="arch-card">
+            <div class="card-num" style="color: #f38020;">SECURITY // 02 · BOT DEFENSE</div>
+            <h3 class="card-title">Turnstile Anti-Bot System</h3>
+            <p class="card-body">
+              Frictionless, privacy-preserving verification. Protects community onboarding forms and ticket submissions against automated spam rings with zero puzzle fatigue.
+            </p>
+          </article>
+
+          <article class="arch-card">
+            <div class="card-num" style="color: #f38020;">SECURITY // 03 · DDOS MITIGATION</div>
+            <h3 class="card-title">Layer 7 Rate Limiting</h3>
+            <p class="card-body">
+              Automated IP subnet clustering and rate-limit buffering protect bot database connections and prevent Discord API 429 penalties during high-volume server raids.
+            </p>
+          </article>
+        </div>
+
+        <!-- Interactive Cloudflare Live Defense Simulator -->
+        <div id="cf-edge-simulator"></div>
+      </div>
+    </section>
+
+    <!-- Selected Work Showcase -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header split-header">
+          <div>
+            <div class="eyebrow">Case Studies</div>
+            <h2 class="section-title">Selected production deployments.</h2>
+          </div>
+          <a class="btn btn-secondary" href="./work.html">View All Archives →</a>
+        </div>
+
+        <div class="grid-2">
+          <article class="arch-card" style="padding: 38px;">
+            <div class="card-num">DEPLOYMENT / 01 · COMMUNITY</div>
+            <h3 class="card-title" style="font-size: 26px;">Member Operations Hub</h3>
+            <p class="card-body">
+              An integrated verification, onboarding, and private support workflow designed for an active community that outgrew manual staff management.
+            </p>
+            <div style="display: flex; gap: 12px; margin-top: 20px; font-family: var(--font-mono); font-size: 11px; color: var(--silver-dark);">
+              <span>• VERIFICATION</span>
+              <span>• PERSISTENT TICKETS</span>
+              <span>• AUDIT LOGS</span>
+            </div>
+            <div style="margin-top: 28px;">
+              <a href="./work/member-operations-hub.html" class="btn btn-primary" style="padding: 10px 20px;">Read Case Study →</a>
+            </div>
+          </article>
+
+          <article class="arch-card" style="padding: 38px;">
+            <div class="card-num">DEPLOYMENT / 02 · GAMING</div>
+            <h3 class="card-title" style="font-size: 26px;">Queue & Match Coordinator</h3>
+            <p class="card-body">
+              Automated competitive queue coordination with dynamic lobby voice channels, captain-pick draft logic, and timely player ping notifications.
+            </p>
+            <div style="display: flex; gap: 12px; margin-top: 20px; font-family: var(--font-mono); font-size: 11px; color: var(--silver-dark);">
+              <span>• DYNAMIC VOICE</span>
+              <span>• QUEUE SCHEDULING</span>
+              <span>• STATS SYNC</span>
+            </div>
+            <div style="margin-top: 28px;">
+              <a href="./work/queue-match-assistant.html" class="btn btn-primary" style="padding: 10px 20px;">Read Case Study →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="section" style="border-top: 1px solid var(--border-subtle); background: radial-gradient(ellipse at 50% 100%, rgba(147, 197, 253, 0.05) 0%, transparent 60%);">
+      <div class="container" style="text-align: center; max-width: 760px;">
+        <div class="eyebrow" style="justify-content: center;">Direct Consultation</div>
+        <h2 class="section-title" style="font-size: clamp(34px, 4.5vw, 60px);">Ready to elevate your Discord infrastructure?</h2>
+        <p class="lead" style="margin: 0 auto 36px;">
+          Tell us about your community, current pain points, and the custom capabilities you need built. We evaluate every brief directly and reply within 24 hours.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a class="btn btn-primary" href="./contact.html">
+            <span>Start an Enquiry</span>
+            <span class="icon-arrow">→</span>
+          </a>
+          <a class="btn btn-secondary" href="./pricing.html">
+            <span>Review Scope & Pricing</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Complete Consistent Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand-link" href="./index.html">
+            <img src="./assets/img/astral-logo.svg" alt="Astral">
+          </a>
+          <p>
+            Bespoke Discord bot development, automation pipelines, moderation systems, and community infrastructure.
+          </p>
+        </div>
+        <div>
+          <div class="footer-col-title">Systems</div>
+          <ul class="footer-links">
+            <li><a href="./services.html">All Services</a></li>
+            <li><a href="./services.html#bots">Custom Bots</a></li>
+            <li><a href="./services.html#automation">Automation</a></li>
+            <li><a href="./services.html#security">Moderation & Security</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Studio</div>
+          <ul class="footer-links">
+            <li><a href="./work.html">Selected Work</a></li>
+            <li><a href="./process.html">Our Process</a></li>
+            <li><a href="./pricing.html">Pricing Structure</a></li>
+            <li><a href="./about.html">About Astral</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact & Meta</div>
+          <ul class="footer-links">
+            <li><a href="./contact.html">Project Enquiry</a></li>
+            <li><a href="mailto:4xiel95@gmail.com">4xiel95@gmail.com</a></li>
+            <li><a href="https://discord.com" target="_blank" rel="noopener">Discord: xief1e</a></li>
+            <li><a href="./sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span class="dynamic-year">2026</span> Astral. All rights reserved.</div>
+        <div>Engineered with Three.js & Modern Web Standards · Bangladesh & Global</div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initNavigation } from './src/components/navigation.js';
+    import { AstralWorld } from './src/scenes/astralWorld.js';
+    import { initDiscordSimulator } from './src/components/discordSimulator.js';
+    import { initMotionSystem } from './src/components/motion.js';
+    import { CloudflareSecuritySystem } from './src/components/cloudflareSecurity.js';
+
+    initNavigation();
+    initMotionSystem();
+    initDiscordSimulator('home-discord-simulator');
+    CloudflareSecuritySystem.initEdgeSecuritySimulator('cf-edge-simulator');
+
+    // Initialize 3D Astral Sculpture
+    const canvas = document.getElementById('hero-3d-canvas');
+    if (canvas) {
+      const world = new AstralWorld(canvas, {
+        interactive: true,
+        enableScrollParallax: true,
+      });
+
+      // Connect interactive toolbar controls
+      const btnExplode = document.getElementById('btn-toggle-explode');
+      btnExplode?.addEventListener('click', () => {
+        const isExploded = world.triggerExplodeToggle();
+        btnExplode.classList.toggle('is-active', isExploded);
+      });
+
+      const btnPulse = document.getElementById('btn-trigger-pulse');
+      btnPulse?.addEventListener('click', () => {
+        world.triggerResonance();
+        btnPulse.classList.add('is-active');
+        setTimeout(() => btnPulse.classList.remove('is-active'), 500);
+      });
+
+      const btnSurge = document.getElementById('btn-trigger-surge');
+      btnSurge?.addEventListener('click', () => {
+        world.triggerSurge();
+        btnSurge.classList.add('is-active');
+        setTimeout(() => btnSurge.classList.remove('is-active'), 600);
+      });
+
+      const btnAlign = document.getElementById('btn-trigger-align');
+      btnAlign?.addEventListener('click', () => {
+        const isAligned = world.triggerAlign();
+        btnAlign.classList.toggle('is-active', isAligned);
+      });
+    }
+  </script>
+</body>
+</html>

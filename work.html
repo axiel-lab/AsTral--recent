@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Selected Work — ASTRAL Discord Systems Archive</title>
+  <meta name="description" content="Explore selected case studies and production Discord architectures developed by Astral.">
+  <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+  <a class="skip-to-content" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="./index.html" aria-label="Astral Home">
+        <img src="./assets/img/astral-logo.svg" alt="Astral">
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a class="nav-link" href="./index.html">Index</a>
+        <a class="nav-link" href="./services.html">Services</a>
+        <a class="nav-link active" href="./work.html">Selected Work</a>
+        <a class="nav-link" href="./process.html">Process</a>
+        <a class="nav-link" href="./pricing.html">Pricing</a>
+        <a class="nav-link" href="./about.html">About</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div class="cloudflare-badge" title="Edge Protected by Cloudflare Global Anycast WAF">
+          <span class="cf-status-pulse"></span>
+          <span>Cloudflare Shield 100%</span>
+        </div>
+        <a class="header-cta" href="./contact.html">
+          <span>Start a Project</span>
+          <span class="icon-arrow">→</span>
+        </a>
+        <button class="mobile-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <a class="nav-link" href="./index.html">Index</a>
+    <a class="nav-link" href="./services.html">Services</a>
+    <a class="nav-link active" href="./work.html">Selected Work</a>
+    <a class="nav-link" href="./process.html">Process</a>
+    <a class="nav-link" href="./pricing.html">Pricing</a>
+    <a class="nav-link" href="./about.html">About</a>
+    <a class="btn btn-primary" href="./contact.html" style="margin-top: 20px;">Start a Project →</a>
+  </div>
+
+  <main id="main" style="padding-top: calc(var(--nav-height) + 50px);">
+    <section class="section" style="padding-top: 30px;">
+      <div class="container">
+        <!-- Editorial Header -->
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="dot"></span>
+            <span>Production Deployments & Architecture</span>
+          </div>
+          <h1 class="section-title" style="font-size: clamp(38px, 5vw, 68px);">
+            Selected Work <span class="serif-italic">&amp; Case Studies.</span>
+          </h1>
+          <p class="lead">
+            Client discretion is respected: many community tools operate in private Discord servers. The case studies below represent real architectural systems, demonstrating the design decisions, data layers, and operational engineering behind our builds.
+          </p>
+        </div>
+
+        <!-- Filter Categories -->
+        <div class="filter-tabs" role="tablist" aria-label="Project Categories">
+          <button type="button" class="filter-btn is-active" data-filter="all">All Systems (4)</button>
+          <button type="button" class="filter-btn" data-filter="community">Community Ops</button>
+          <button type="button" class="filter-btn" data-filter="gaming">Gaming & Queues</button>
+          <button type="button" class="filter-btn" data-filter="moderation">Security & Incident</button>
+          <button type="button" class="filter-btn" data-filter="creator">Creator & Membership</button>
+        </div>
+
+        <!-- Project Archive Listings -->
+        <div class="project-listings" style="display: flex; flex-direction: column; gap: 40px;">
+          
+          <!-- Project 01 -->
+          <article class="arch-card project-card" data-category="community" style="padding: 44px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 14px; margin-bottom: 20px;">
+              <span class="card-num">DEPLOYMENT / 01 · COMMUNITY WORKFLOW</span>
+              <span style="font-family: var(--font-mono); font-size: 11px; color: var(--accent-ice);">POSTGRESQL · DISCORD.PY · REDIS</span>
+            </div>
+            <div class="grid-2" style="align-items: center; gap: 40px;">
+              <div>
+                <h2 style="font-size: clamp(26px, 3.2vw, 38px); margin-bottom: 16px;">Member Operations Hub</h2>
+                <p style="margin-bottom: 24px;">
+                  A multi-tier onboarding, identity verification, and persistent ticket system architected for an expanding community of 12,000+ members. Eliminates manual verification bottleneck while enforcing strict role isolation.
+                </p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 11px; color: var(--silver-dark); margin-bottom: 30px;">
+                  <span class="control-pill" style="pointer-events: none;">Dynamic Modals</span>
+                  <span class="control-pill" style="pointer-events: none;">Sub-50ms Ephemeral Routing</span>
+                  <span class="control-pill" style="pointer-events: none;">Encrypted Ticket Transcripts</span>
+                </div>
+                <a href="./work/member-operations-hub.html" class="btn btn-primary">
+                  <span>Inspect Case Study</span>
+                  <span class="icon-arrow">→</span>
+                </a>
+              </div>
+              <div style="background: #0a0c10; border: 1px solid var(--border); border-radius: 12px; padding: 24px; font-family: var(--font-mono); font-size: 12px;">
+                <div style="color: var(--silver-dark); margin-bottom: 12px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px;">
+                  METRICS SUMMARY
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                  <div>
+                    <div style="color: var(--text-dim); font-size: 10px;">AVERAGE ONBOARD TIME</div>
+                    <div style="color: var(--silver-bright); font-size: 18px; font-weight: 700; margin-top: 4px;">42 Seconds</div>
+                  </div>
+                  <div>
+                    <div style="color: var(--text-dim); font-size: 10px;">STAFF TIME SAVED</div>
+                    <div style="color: var(--silver-bright); font-size: 18px; font-weight: 700; margin-top: 4px;">18 hrs / week</div>
+                  </div>
+                  <div>
+                    <div style="color: var(--text-dim); font-size: 10px;">VERIFICATION RATE</div>
+                    <div style="color: var(--accent-ice); font-size: 18px; font-weight: 700; margin-top: 4px;">99.4%</div>
+                  </div>
+                  <div>
+                    <div style="color: var(--text-dim); font-size: 10px;">FALSE POSITIVES</div>
+                    <div style="color: var(--accent-ice); font-size: 18px; font-weight: 700; margin-top: 4px;">0 Reported</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 02 -->
+          <article class="arch-card project-card" data-category="gaming" style="padding: 44px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 14px; margin-bottom: 20px;">
+              <span class="card-num">DEPLOYMENT / 02 · GAMING INFRASTRUCTURE</span>
+              <span style="font-family: var(--font-mono); font-size: 11px; color: var(--accent-ice);">NODE.JS · DISCORD.JS · WEBSOCKETS</span>
+            </div>
+            <div class="grid-2" style="align-items: center; gap: 40px;">
+              <div>
+                <h2 style="font-size: clamp(26px, 3.2vw, 38px); margin-bottom: 16px;">Queue &amp; Match Coordinator</h2>
+                <p style="margin-bottom: 24px;">
+                  Real-time competitive matchmaking engine with dynamic captain picks, automated voice channel synthesis, server region selection, and match match history analytics.
+                </p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 11px; color: var(--silver-dark); margin-bottom: 30px;">
+                  <span class="control-pill" style="pointer-events: none;">Dynamic Voice Generation</span>
+                  <span class="control-pill" style="pointer-events: none;">Captain Draft UI</span>
+                  <span class="control-pill" style="pointer-events: none;">Auto-Disband On Completion</span>
+                </div>
+                <a href="./work/queue-match-assistant.html" class="btn btn-primary">
+                  <span>Inspect Case Study</span>
+                  <span class="icon-arrow">→</span>
+                </a>
+              </div>
+              <div style="background: #0a0c10; border: 1px solid var(--border); border-radius: 12px; padding: 24px; font-family: var(--font-mono); font-size: 12px;">
+                <div style="color: var(--silver-dark); margin-bottom: 12px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px;">
+                  METRICS SUMMARY
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                  <div>
+                    <div style="color: var(--text-dim); font-size: 10px;">MATCHES DISPATCHED</div>
+                    <div style="color: var(--silver-bright); font-size: 18px; font-weight: 700; margin-top: 4px;">4,200+</div>
+                  </div>
+                  <div>
+                    <div style="color: var(--text-dim); font-size: 10px;">QUEUE LATENCY</div>
+                    <div style="color: var(--silver-bright); font-size: 18px; font-weight: 700; margin-top: 4px;">&lt; 15ms</div>
+                  </div>
+                  <div>
+                    <div style="color: var(--text-dim); font-size: 10px;">LOBBY RETENTION</div>
+                    <div style="color: var(--accent-ice); font-size: 18px; font-weight: 700; margin-top: 4px;">96.8%</div>
+                  </div>
+                  <div>
+                    <div style="color: var(--text-dim); font-size: 10px;">DYNAMIC CHANNELS</div>
+                    <div style="color: var(--accent-ice); font-size: 18px; font-weight: 700; margin-top: 4px;">Zero Orphan VCs</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 03 -->
+          <article class="arch-card project-card" data-category="creator" style="padding: 44px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 14px; margin-bottom: 20px;">
+              <span class="card-num">DEPLOYMENT / 03 · CREATOR ECOSYSTEM</span>
+              <span style="font-family: var(--font-mono); font-size: 11px; color: var(--accent-ice);">FASTAPI · STRIPE WEBHOOKS · SQLITE</span>
+            </div>
+            <div class="grid-2" style="align-items: center; gap: 40px;">
+              <div>
+                <h2 style="font-size: clamp(26px, 3.2vw, 38px); margin-bottom: 16px;">Supporter Community Engine</h2>
+                <p style="margin-bottom: 24px;">
+                  Automated role syncing for Patreon, Ko-fi, and Stripe supporters with automated expiration warnings, VIP discussion drops, and event reminder dispatchers.
+                </p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 11px; color: var(--silver-dark); margin-bottom: 30px;">
+                  <span class="control-pill" style="pointer-events: none;">Stripe Webhook Listener</span>
+                  <span class="control-pill" style="pointer-events: none;">Grace Period Handlers</span>
+                  <span class="control-pill" style="pointer-events: none;">Role Tier Matrix</span>
+                </div>
+                <a href="./work/supporter-community.html" class="btn btn-primary">
+                  <span>Inspect Case Study</span>
+                  <span class="icon-arrow">→</span>
+                </a>
+              </div>
+              <div style="background: #0a0c10; border: 1px solid var(--border); border-radius: 12px; padding: 24px; font-family: var(--font-mono); font-size: 12px;">
+                <div style="color: var(--silver-dark); margin-bottom: 12px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px;">
+                  METRICS SUMMARY
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                  <div>
+                    <div style="color: var(--text-dim); font-size: 10px;">TIER ACCURACY</div>
+                    <div style="color: var(--silver-bright); font-size: 18px; font-weight: 700; margin-top: 4px;">100%</div>
+                  </div>
+                  <div>
+                    <div style="color: var(--text-dim); font-size: 10px;">RENEWAL CHURN</div>
+                    <div style="color: var(--silver-bright); font-size: 18px; font-weight: 700; margin-top: 4px;">-14%</div>
+                  </div>
+                  <div>
+                    <div style="color: var(--text-dim); font-size: 10px;">AUTOMATION RATE</div>
+                    <div style="color: var(--accent-ice); font-size: 18px; font-weight: 700; margin-top: 4px;">Zero Manual Roles</div>
+                  </div>
+                  <div>
+                    <div style="color: var(--text-dim); font-size: 10px;">EXPIRATION GRACE</div>
+                    <div style="color: var(--accent-ice); font-size: 18px; font-weight: 700; margin-top: 4px;">48hr Warning</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 04 -->
+          <article class="arch-card project-card" data-category="moderation" style="padding: 44px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 14px; margin-bottom: 20px;">
+              <span class="card-num">DEPLOYMENT / 04 · SECURITY &amp; MODERATION</span>
+              <span style="font-family: var(--font-mono); font-size: 11px; color: var(--accent-ice);">DOCKER · DISCORD AUDIT API · S3 ARCHIVE</span>
+            </div>
+            <div class="grid-2" style="align-items: center; gap: 40px;">
+              <div>
+                <h2 style="font-size: clamp(26px, 3.2vw, 38px); margin-bottom: 16px;">Incident &amp; Audit Workflow</h2>
+                <p style="margin-bottom: 24px;">
+                  Staff-first security operations pipeline centralizing member reports, message snapshot evidence, immutable moderation logs, and formal appeal workflows into a coherent staff triage channel.
+                </p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 11px; color: var(--silver-dark); margin-bottom: 30px;">
+                  <span class="control-pill" style="pointer-events: none;">Evidence Archiving</span>
+                  <span class="control-pill" style="pointer-events: none;">Contextual Case IDs</span>
+                  <span class="control-pill" style="pointer-events: none;">Staff Decision Buttons</span>
+                </div>
+                <a href="./work/incident-workflow.html" class="btn btn-primary">
+                  <span>Inspect Case Study</span>
+                  <span class="icon-arrow">→</span>
+                </a>
+              </div>
+              <div style="background: #0a0c10; border: 1px solid var(--border); border-radius: 12px; padding: 24px; font-family: var(--font-mono); font-size: 12px;">
+                <div style="color: var(--silver-dark); margin-bottom: 12px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px;">
+                  METRICS SUMMARY
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                  <div>
+                    <div style="color: var(--text-dim); font-size: 10px;">AVERAGE RESPONSE</div>
+                    <div style="color: var(--silver-bright); font-size: 18px; font-weight: 700; margin-top: 4px;">4.5 Mins</div>
+                  </div>
+                  <div>
+                    <div style="color: var(--text-dim); font-size: 10px;">AUDIT TRAIL INTEGRITY</div>
+                    <div style="color: var(--silver-bright); font-size: 18px; font-weight: 700; margin-top: 4px;">Cryptographic Hash</div>
+                  </div>
+                  <div>
+                    <div style="color: var(--text-dim); font-size: 10px;">RAID DEFENSE</div>
+                    <div style="color: var(--accent-ice); font-size: 18px; font-weight: 700; margin-top: 4px;">100% Mitigated</div>
+                  </div>
+                  <div>
+                    <div style="color: var(--text-dim); font-size: 10px;">APPEAL RESOLUTION</div>
+                    <div style="color: var(--accent-ice); font-size: 18px; font-weight: 700; margin-top: 4px;">Integrated Modal</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="section" style="border-top: 1px solid var(--border-subtle);">
+      <div class="container" style="text-align: center; max-width: 680px;">
+        <h2 class="section-title">Have a unique community challenge?</h2>
+        <p style="margin-bottom: 32px;">
+          Whether you need a streamlined ticketing queue or a custom multiplayer matchmaking cluster, we can scope it with clarity.
+        </p>
+        <a class="btn btn-primary" href="./contact.html">
+          <span>Discuss Your Requirement</span>
+          <span class="icon-arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Complete Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand-link" href="./index.html">
+            <img src="./assets/img/astral-logo.svg" alt="Astral">
+          </a>
+          <p>
+            Bespoke Discord bot development, automation pipelines, moderation systems, and community infrastructure.
+          </p>
+        </div>
+        <div>
+          <div class="footer-col-title">Systems</div>
+          <ul class="footer-links">
+            <li><a href="./services.html">All Services</a></li>
+            <li><a href="./services.html#bots">Custom Bots</a></li>
+            <li><a href="./services.html#automation">Automation</a></li>
+            <li><a href="./services.html#security">Moderation & Security</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Studio</div>
+          <ul class="footer-links">
+            <li><a href="./work.html">Selected Work</a></li>
+            <li><a href="./process.html">Our Process</a></li>
+            <li><a href="./pricing.html">Pricing Structure</a></li>
+            <li><a href="./about.html">About Astral</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact & Meta</div>
+          <ul class="footer-links">
+            <li><a href="./contact.html">Project Enquiry</a></li>
+            <li><a href="mailto:4xiel95@gmail.com">4xiel95@gmail.com</a></li>
+            <li><a href="https://discord.com" target="_blank" rel="noopener">Discord: xief1e</a></li>
+            <li><a href="./sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span class="dynamic-year">2026</span> Astral. All rights reserved.</div>
+        <div>Engineered with Three.js & Modern Web Standards · Bangladesh & Global</div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initNavigation } from './src/components/navigation.js';
+    import { initMotionSystem } from './src/components/motion.js';
+
+    initNavigation();
+    initMotionSystem();
+
+    // Category filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+
+        const filter = btn.dataset.filter;
+        cards.forEach((card) => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

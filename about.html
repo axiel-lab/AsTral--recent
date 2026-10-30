@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Astral — Independent Discord Engineering Studio</title>
+  <meta name="description" content="Astral is an independent digital studio founded by Axiel, specializing in resilient Discord bot development, automation, and community systems.">
+  <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+  <a class="skip-to-content" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="./index.html" aria-label="Astral Home">
+        <img src="./assets/img/astral-logo.svg" alt="Astral">
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a class="nav-link" href="./index.html">Index</a>
+        <a class="nav-link" href="./services.html">Services</a>
+        <a class="nav-link" href="./work.html">Selected Work</a>
+        <a class="nav-link" href="./process.html">Process</a>
+        <a class="nav-link" href="./pricing.html">Pricing</a>
+        <a class="nav-link active" href="./about.html">About</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div class="cloudflare-badge" title="Edge Protected by Cloudflare Global Anycast WAF">
+          <span class="cf-status-pulse"></span>
+          <span>Cloudflare Shield 100%</span>
+        </div>
+        <a class="header-cta" href="./contact.html">
+          <span>Start a Project</span>
+          <span class="icon-arrow">→</span>
+        </a>
+        <button class="mobile-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <a class="nav-link" href="./index.html">Index</a>
+    <a class="nav-link" href="./services.html">Services</a>
+    <a class="nav-link" href="./work.html">Selected Work</a>
+    <a class="nav-link" href="./process.html">Process</a>
+    <a class="nav-link" href="./pricing.html">Pricing</a>
+    <a class="nav-link active" href="./about.html">About</a>
+    <a class="btn btn-primary" href="./contact.html" style="margin-top: 20px;">Start a Project →</a>
+  </div>
+
+  <main id="main" style="padding-top: calc(var(--nav-height) + 50px);">
+    <section class="section" style="padding-top: 20px;">
+      <div class="container">
+        
+        <!-- Header -->
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="dot"></span>
+            <span>Studio Ethos &amp; Background</span>
+          </div>
+          <h1 class="section-title" style="font-size: clamp(38px, 5vw, 68px);">
+            Small studio. <span class="serif-italic">Serious engineering.</span>
+          </h1>
+          <p class="lead">
+            Astral is an independent Discord development practice founded by Axiel, operating from Bangladesh and collaborating with community creators worldwide.
+          </p>
+        </div>
+
+        <!-- Studio Manifesto & Origin -->
+        <div class="grid-2" style="gap: 50px; align-items: flex-start; margin-bottom: 80px;">
+          <div>
+            <div class="card-num">STUDIO ORIGIN</div>
+            <h2 style="font-size: 28px; margin-bottom: 18px;">Why Astral Exists</h2>
+            <p style="margin-bottom: 18px;">
+              Most Discord servers are held together by a fragile patchwork of 8 to 15 different public bots. Each bot introduces its own downtime, conflicting commands, spammy advertisements, and confusing dashboards.
+            </p>
+            <p style="margin-bottom: 18px;">
+              Astral was founded to provide communities with a better alternative: a single, unified, purpose-built bot engineered specifically around how your server works.
+            </p>
+            <p>
+              We don't claim to be a massive enterprise corporation. We are a focused independent studio that treats Discord development as serious software engineering.
+            </p>
+          </div>
+
+          <!-- 3D Mini Ambient Sculpture -->
+          <div style="position: relative; height: 380px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); background: radial-gradient(circle at 50% 50%, #11141d 0%, #08090b 100%);">
+            <canvas id="about-3d-canvas" class="webgl-canvas"></canvas>
+            <div class="canvas-hint">
+              <span>● Interactive Astral Node</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Engineering Principles -->
+        <div style="margin-bottom: 80px; border-top: 1px solid var(--border); padding-top: 70px;">
+          <div class="section-header">
+            <div class="eyebrow">Code Quality</div>
+            <h2 class="section-title">Engineering Principles</h2>
+            <p>Every system we deploy is held to strict reliability standards.</p>
+          </div>
+
+          <div class="grid-3">
+            <article class="arch-card">
+              <div class="card-num">PRINCIPLE / 01</div>
+              <h3 class="card-title">Resilient Gateway Handling</h3>
+              <p class="card-body">
+                Discord WebSocket connections inevitably disconnect. Our bots feature exponential reconnect backoffs, heartbeat watchdogs, and state reconciliation to ensure zero message dropped.
+              </p>
+            </article>
+
+            <article class="arch-card">
+              <div class="card-num">PRINCIPLE / 02</div>
+              <h3 class="card-title">Zero Unhandled Rejections</h3>
+              <p class="card-body">
+                Every Discord interaction is wrapped in contextual error handlers with ephemeral explanations sent to the user, ensuring the bot never hangs silently or crashes in production.
+              </p>
+            </article>
+
+            <article class="arch-card">
+              <div class="card-num">PRINCIPLE / 03</div>
+              <h3 class="card-title">Strict Rate-Limit Discipline</h3>
+              <p class="card-body">
+                We implement local token bucket queues to buffer bulk message edits, role changes, and channel deletions before Discord's REST API rate limits can trigger 429 penalties.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Design Principles -->
+        <div style="margin-bottom: 80px; border-top: 1px solid var(--border); padding-top: 70px;">
+          <div class="section-header">
+            <div class="eyebrow">User Experience</div>
+            <h2 class="section-title">Design Principles for Discord</h2>
+            <p>A bot should feel like a natural extension of Discord, not an annoying intrusion.</p>
+          </div>
+
+          <div class="grid-2">
+            <article class="arch-card" style="padding: 36px;">
+              <div class="card-num">DESIGN / 01</div>
+              <h3 class="card-title">Clarity Over Chaos</h3>
+              <p class="card-body">
+                No garish neon colors, no wall of 50 emojis in embeds, and no irrelevant promotional links. We design calm, readable interfaces with clean typography, concise copy, and logical action rows.
+              </p>
+            </article>
+
+            <article class="arch-card" style="padding: 36px;">
+              <div class="card-num">DESIGN / 02</div>
+              <h3 class="card-title">Context-Aware Interaction</h3>
+              <p class="card-body">
+                Modals for complex inputs, dropdowns for selection menus, buttons for instant actions, and ephemeral notices for private feedback. We use the right Discord primitive for each task.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Reliability & Hosting Standards -->
+        <div style="background: #0d0f14; border: 1px solid var(--border); border-radius: 14px; padding: clamp(28px, 4vw, 44px); margin-bottom: 80px;">
+          <div class="eyebrow">Infrastructure &amp; Operations</div>
+          <h2 style="font-size: 28px; margin-bottom: 16px;">Approach to Maintainability</h2>
+          <p style="margin-bottom: 24px; max-width: 820px;">
+            Software doesn't end when the code is committed. We design systems that can be safely maintained for years without breaking:
+          </p>
+          <div class="grid-3" style="font-family: var(--font-mono); font-size: 13px;">
+            <div style="background: #12141c; border: 1px solid var(--border-subtle); padding: 20px; border-radius: 8px;">
+              <div style="color: var(--accent-ice); margin-bottom: 6px;">ISOLATED CONTAINERS</div>
+              <p style="font-size: 12px; font-family: var(--font-sans); color: var(--text-muted);">
+                Every bot is packaged with a multi-stage Dockerfile containing all runtime dependencies, preventing OS conflicts.
+              </p>
+            </div>
+            <div style="background: #12141c; border: 1px solid var(--border-subtle); padding: 20px; border-radius: 8px;">
+              <div style="color: var(--accent-ice); margin-bottom: 6px;">DATABASE MIGRATIONS</div>
+              <p style="font-size: 12px; font-family: var(--font-sans); color: var(--text-muted);">
+                Schema changes use versioned migration scripts (Alembic/Prisma), allowing seamless updates without data loss.
+              </p>
+            </div>
+            <div style="background: #12141c; border: 1px solid var(--border-subtle); padding: 20px; border-radius: 8px;">
+              <div style="color: var(--accent-ice); margin-bottom: 6px;">AUTOMATED BACKUPS</div>
+              <p style="font-size: 12px; font-family: var(--font-sans); color: var(--text-muted);">
+                Daily encrypted database snapshots sent off-site ensure complete recovery even in worst-case server failure.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="section" style="border-top: 1px solid var(--border-subtle);">
+      <div class="container" style="text-align: center; max-width: 680px;">
+        <h2 class="section-title">Want to build something enduring?</h2>
+        <p style="margin-bottom: 32px;">
+          Let's talk about what your community needs. We're ready to engineer a custom system that lasts.
+        </p>
+        <a class="btn btn-primary" href="./contact.html">
+          <span>Start a Conversation</span>
+          <span class="icon-arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Complete Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand-link" href="./index.html">
+            <img src="./assets/img/astral-logo.svg" alt="Astral">
+          </a>
+          <p>
+            Bespoke Discord bot development, automation pipelines, moderation systems, and community infrastructure.
+          </p>
+        </div>
+        <div>
+          <div class="footer-col-title">Systems</div>
+          <ul class="footer-links">
+            <li><a href="./services.html">All Services</a></li>
+            <li><a href="./services.html#bots">Custom Bots</a></li>
+            <li><a href="./services.html#automation">Automation</a></li>
+            <li><a href="./services.html#security">Moderation & Security</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Studio</div>
+          <ul class="footer-links">
+            <li><a href="./work.html">Selected Work</a></li>
+            <li><a href="./process.html">Our Process</a></li>
+            <li><a href="./pricing.html">Pricing Structure</a></li>
+            <li><a href="./about.html">About Astral</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact & Meta</div>
+          <ul class="footer-links">
+            <li><a href="./contact.html">Project Enquiry</a></li>
+            <li><a href="mailto:4xiel95@gmail.com">4xiel95@gmail.com</a></li>
+            <li><a href="https://discord.com" target="_blank" rel="noopener">Discord: xief1e</a></li>
+            <li><a href="./sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span class="dynamic-year">2026</span> Astral. All rights reserved.</div>
+        <div>Engineered with Three.js & Modern Web Standards · Bangladesh & Global</div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initNavigation } from './src/components/navigation.js';
+    import { initMotionSystem } from './src/components/motion.js';
+    import { AstralWorld } from './src/scenes/astralWorld.js';
+
+    initNavigation();
+    initMotionSystem();
+
+    // Initialize compact 3D World for About page
+    const canvas = document.getElementById('about-3d-canvas');
+    if (canvas) {
+      new AstralWorld(canvas, {
+        interactive: true,
+        enableScrollParallax: false,
+      });
+    }
+  </script>
+</body>
+</html>

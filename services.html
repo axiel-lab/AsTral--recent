@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services &amp; Capabilities — ASTRAL Discord Engineering</title>
+  <meta name="description" content="Explore bespoke Discord bot engineering, community automation, moderation security pipelines, and dedicated hosting infrastructure.">
+  <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+  <a class="skip-to-content" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="./index.html" aria-label="Astral Home">
+        <img src="./assets/img/astral-logo.svg" alt="Astral">
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a class="nav-link" href="./index.html">Index</a>
+        <a class="nav-link active" href="./services.html">Services</a>
+        <a class="nav-link" href="./work.html">Selected Work</a>
+        <a class="nav-link" href="./process.html">Process</a>
+        <a class="nav-link" href="./pricing.html">Pricing</a>
+        <a class="nav-link" href="./about.html">About</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div class="cloudflare-badge" title="Edge Protected by Cloudflare Global Anycast WAF">
+          <span class="cf-status-pulse"></span>
+          <span>Cloudflare Shield 100%</span>
+        </div>
+        <a class="header-cta" href="./contact.html">
+          <span>Start a Project</span>
+          <span class="icon-arrow">→</span>
+        </a>
+        <button class="mobile-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <a class="nav-link" href="./index.html">Index</a>
+    <a class="nav-link active" href="./services.html">Services</a>
+    <a class="nav-link" href="./work.html">Selected Work</a>
+    <a class="nav-link" href="./process.html">Process</a>
+    <a class="nav-link" href="./pricing.html">Pricing</a>
+    <a class="nav-link" href="./about.html">About</a>
+    <a class="btn btn-primary" href="./contact.html" style="margin-top: 20px;">Start a Project →</a>
+  </div>
+
+  <main id="main" style="padding-top: calc(var(--nav-height) + 50px);">
+    <section class="section" style="padding-top: 20px;">
+      <div class="container">
+        
+        <!-- Header -->
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="dot"></span>
+            <span>Studio Capabilities &amp; Engineering Disciplines</span>
+          </div>
+          <h1 class="section-title" style="font-size: clamp(38px, 5vw, 68px);">
+            Engineered around your <span class="serif-italic">exact workflow.</span>
+          </h1>
+          <p class="lead">
+            We build focused, maintainable Discord systems. We do not force your server into pre-built SaaS templates or feature creep. Every system solves a verified operational bottleneck.
+          </p>
+        </div>
+
+        <!-- Service 01: Custom Discord Bots -->
+        <div id="bots" class="service-block" style="border-top: 1px solid var(--border); padding: 60px 0;">
+          <div class="grid-2" style="gap: 50px; align-items: flex-start;">
+            <div>
+              <div class="card-num">CAPABILITY / 01</div>
+              <h2 style="font-size: clamp(28px, 3.5vw, 42px); margin-bottom: 18px;">Custom Discord Bots</h2>
+              <div style="font-size: 15px; color: var(--silver); margin-bottom: 24px;">
+                <strong>The Problem:</strong> Generic public bots force your community to remember arcane commands, spam channels with external advertising, suffer frequent third-party outages, and lack the custom logic your community requires.
+              </div>
+              <p style="margin-bottom: 24px;">
+                Astral architects purpose-built bots with native slash commands, modal inputs, button interactions, and custom embeds that reflect your brand identity with zero third-party clutter.
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 12px; color: var(--silver-dark); line-height: 1.8;">
+                <div style="color: var(--silver-bright); font-weight: 600; margin-bottom: 6px;">WHAT YOU RECEIVE:</div>
+                • Fully owned, cleanly commented source repository (Python or TypeScript)<br>
+                • Custom slash command hierarchy &amp; auto-completing arguments<br>
+                • Interactive Discord components (Select Menus, Buttons, Modals)<br>
+                • Database schema &amp; automated migrations (PostgreSQL/SQLite)<br>
+                • Dockerfile &amp; automated environment configuration
+              </div>
+            </div>
+
+            <!-- Architectural Blueprint Box -->
+            <div style="background: #0d0f14; border: 1px solid var(--border); border-radius: 12px; padding: 32px; font-family: var(--font-mono); font-size: 12px;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 12px; margin-bottom: 20px;">
+                <span style="color: var(--silver-bright); font-weight: 700;">SPECIFICATION // BOT.CORE</span>
+                <span style="color: var(--accent-ice);">REST + WS SHARD</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-dim);">DISCORD API:</span>
+                  <span style="color: var(--silver);">v10 Gateway (Payload Compressed)</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-dim);">COMMAND REGISTRATION:</span>
+                  <span style="color: var(--silver);">Global or Guild-Scoped Instant Sync</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-dim);">RATE LIMIT HANDLING:</span>
+                  <span style="color: var(--silver);">Adaptive Bucket Backoff Queue</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-dim);">ERROR RECOVERY:</span>
+                  <span style="color: var(--silver);">Zero-Crash Process Supervision</span>
+                </div>
+              </div>
+              <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+                <a href="./contact.html" class="btn btn-secondary" style="width: 100%;">Scope a Custom Bot →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 02: Community Automation -->
+        <div id="automation" class="service-block" style="border-top: 1px solid var(--border); padding: 60px 0;">
+          <div class="grid-2" style="gap: 50px; align-items: flex-start;">
+            <div>
+              <div class="card-num">CAPABILITY / 02</div>
+              <h2 style="font-size: clamp(28px, 3.5vw, 42px); margin-bottom: 18px;">Community Automation Pipelines</h2>
+              <div style="font-size: 15px; color: var(--silver); margin-bottom: 24px;">
+                <strong>The Problem:</strong> Community staff waste hours every week manually assigning supporter roles, checking application forms, synchronizing calendar events, and welcoming members individually.
+              </div>
+              <p style="margin-bottom: 24px;">
+                We connect Discord directly with the tools you already run—Stripe, Shopify, Google Sheets, GitHub, custom REST APIs—enabling predictable, repetitive tasks to execute seamlessly in the background.
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 12px; color: var(--silver-dark); line-height: 1.8;">
+                <div style="color: var(--silver-bright); font-weight: 600; margin-bottom: 6px;">WHAT YOU RECEIVE:</div>
+                • Secure external webhook receiver with signature validation<br>
+                • Instant role granting &amp; revoking with grace period rules<br>
+                • Scheduled cron reminders, leaderboard drops, and recurring events<br>
+                • Resilient message queues (Redis/BullMQ) with automated retries<br>
+                • Health monitoring &amp; alert webhooks sent to staff channels
+              </div>
+            </div>
+
+            <div style="background: #0d0f14; border: 1px solid var(--border); border-radius: 12px; padding: 32px; font-family: var(--font-mono); font-size: 12px;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 12px; margin-bottom: 20px;">
+                <span style="color: var(--silver-bright); font-weight: 700;">SPECIFICATION // PIPELINE.EVENT</span>
+                <span style="color: var(--accent-ice);">ASYNCHRONOUS</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-dim);">WEBHOOK LATENCY:</span>
+                  <span style="color: var(--silver);">&lt; 45ms Ingestion to Gateway</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-dim);">IDEMPOTENCY:</span>
+                  <span style="color: var(--silver);">Unique Event Key De-duplication</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-dim);">EXTERNAL RETRIES:</span>
+                  <span style="color: var(--silver);">Exponential Backoff (3 Tries)</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-dim);">AUDIT PERSISTENCE:</span>
+                  <span style="color: var(--silver);">Timestamped JSON Log History</span>
+                </div>
+              </div>
+              <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+                <a href="./contact.html" class="btn btn-secondary" style="width: 100%;">Automate Your Server →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 03: Moderation & Security -->
+        <div id="security" class="service-block" style="border-top: 1px solid var(--border); padding: 60px 0;">
+          <div class="grid-2" style="gap: 50px; align-items: flex-start;">
+            <div>
+              <div class="card-num">CAPABILITY / 03</div>
+              <h2 style="font-size: clamp(28px, 3.5vw, 42px); margin-bottom: 18px;">Moderation &amp; Security Systems</h2>
+              <div style="font-size: 15px; color: var(--silver); margin-bottom: 24px;">
+                <strong>The Problem:</strong> Coordinated raid attacks, spam bots, impersonators, and toxic deleted messages exploit slow staff reactions and unverified permission hierarchies.
+              </div>
+              <p style="margin-bottom: 24px;">
+                We build defensive fortress systems: heuristic join screening, instant lockdown panic toggles, message modification caching with image preservation, and staff escalation boards with auditable case tracking.
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 12px; color: var(--silver-dark); line-height: 1.8;">
+                <div style="color: var(--silver-bright); font-weight: 600; margin-bottom: 6px;">WHAT YOU RECEIVE:</div>
+                • Anti-raid join rate limiter with automatic server quarantine<br>
+                • Deleted message context &amp; attachment snapshot archiving<br>
+                • Staff incident triage channel with interactive verdict buttons<br>
+                • Member infraction history commands (<code>/history @user</code>)<br>
+                • Formal appeal intake modal &amp; case assignment
+              </div>
+            </div>
+
+            <div style="background: #0d0f14; border: 1px solid var(--border); border-radius: 12px; padding: 32px; font-family: var(--font-mono); font-size: 12px;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 12px; margin-bottom: 20px;">
+                <span style="color: var(--silver-bright); font-weight: 700;">SPECIFICATION // DEFENSE.GUARD</span>
+                <span style="color: var(--accent-ice);">HEURISTIC</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-dim);">RAID DETECTION:</span>
+                  <span style="color: var(--silver);">&gt; 10 Joins/Sec Auto-Lockdown</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-dim);">EVIDENCE LOGGING:</span>
+                  <span style="color: var(--silver);">SHA-256 Verified Storage</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-dim);">PERM GUARD:</span>
+                  <span style="color: var(--silver);">Staff Hierarchy Enforced</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-dim);">APPEALS:</span>
+                  <span style="color: var(--silver);">Automated Ephemeral Modal</span>
+                </div>
+              </div>
+              <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+                <a href="./contact.html" class="btn btn-secondary" style="width: 100%;">Fortify Your Server →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 04: Maintenance & Hosting -->
+        <div id="hosting" class="service-block" style="border-top: 1px solid var(--border); padding: 60px 0;">
+          <div class="grid-2" style="gap: 50px; align-items: flex-start;">
+            <div>
+              <div class="card-num">CAPABILITY / 04</div>
+              <h2 style="font-size: clamp(28px, 3.5vw, 42px); margin-bottom: 18px;">Managed Hosting &amp; Maintenance</h2>
+              <div style="font-size: 15px; color: var(--silver); margin-bottom: 24px;">
+                <strong>The Problem:</strong> Hosting a Discord bot on a home computer or free cloud tier leads to dropped gateway heartbeats, sleep-mode latency, database corruption, and zero automated restarts.
+              </div>
+              <p style="margin-bottom: 24px;">
+                For clients who want peace of mind, Astral provisions isolated VPS container shards with 99.9% uptime SLAs, daily automated database backups, Discord API version upgrades, and 24/7 process supervision.
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 12px; color: var(--silver-dark); line-height: 1.8;">
+                <div style="color: var(--silver-bright); font-weight: 600; margin-bottom: 6px;">WHAT YOU RECEIVE:</div>
+                • Dedicated cloud container with isolated RAM and CPU cores<br>
+                • Automated zero-downtime rolling deploys<br>
+                • Daily encrypted SQLite/PostgreSQL cloud backups<br>
+                • Proactive Discord API version migration updates<br>
+                • Direct priority support channel with Astral engineers
+              </div>
+            </div>
+
+            <div style="background: #0d0f14; border: 1px solid var(--border); border-radius: 12px; padding: 32px; font-family: var(--font-mono); font-size: 12px;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 12px; margin-bottom: 20px;">
+                <span style="color: var(--silver-bright); font-weight: 700;">SPECIFICATION // HOST.MANAGED</span>
+                <span style="color: var(--accent-ice);">SLA 99.9%</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-dim);">UPTIME TARGET:</span>
+                  <span style="color: var(--silver);">99.98% Monitored Uptime</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-dim);">BACKUP RETENTION:</span>
+                  <span style="color: var(--silver);">30-Day Rolling Daily Snapshots</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-dim);">DISCORD API:</span>
+                  <span style="color: var(--silver);">Guaranteed Breaking Change Patches</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-dim);">ALERTING:</span>
+                  <span style="color: var(--silver);">Instant Webhook &amp; SMS Dispatch</span>
+                </div>
+              </div>
+              <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+                <a href="./pricing.html" class="btn btn-secondary" style="width: 100%;">View Hosting &amp; Project Pricing →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 05: Cloudflare Edge Security & DDoS Protection -->
+        <div id="cloudflare" class="service-block" style="border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 60px 0;">
+          <div class="grid-2" style="gap: 50px; align-items: flex-start;">
+            <div>
+              <div class="card-num" style="color: #f38020;">CAPABILITY / 05 · CLOUDFLARE SECURITY</div>
+              <h2 style="font-size: clamp(28px, 3.5vw, 42px); margin-bottom: 18px;">Cloudflare Edge Shield &amp; WAF</h2>
+              <div style="font-size: 15px; color: var(--silver); margin-bottom: 24px;">
+                <strong>The Problem:</strong> Public webhooks, member portals, and bot status dashboards are prime targets for malicious HTTP floods, DDoS attacks, SQL injection attempts, and automated spam rings.
+              </div>
+              <p style="margin-bottom: 24px;">
+                Astral integrates Cloudflare's Anycast Edge Network directly in front of all server infrastructure. Requests are authenticated, rate-limited, and filtered across 330+ edge locations before touching origin bot servers.
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 12px; color: var(--silver-dark); line-height: 1.8;">
+                <div style="color: var(--silver-bright); font-weight: 600; margin-bottom: 6px;">WHAT YOU RECEIVE:</div>
+                • Cloudflare Turnstile integration on onboarding and verification forms<br>
+                • Cloudflare Workers edge webhook sanitization &amp; signature check<br>
+                • Layer 7 DDoS mitigation with adaptive IP rate limiting<br>
+                • Custom WAF rules protecting bot REST API endpoints<br>
+                • Free edge SSL/TLS encryption with HTTP/3 QUIC support
+              </div>
+            </div>
+
+            <div>
+              <div style="background: #0d0f14; border: 1px solid var(--border); border-radius: 12px; padding: 32px; font-family: var(--font-mono); font-size: 12px; margin-bottom: 20px;">
+                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 12px; margin-bottom: 20px;">
+                  <span style="color: #fed7aa; font-weight: 700;">SPECIFICATION // CLOUDFLARE.EDGE</span>
+                  <span style="color: #22c55e;">ZERO TRUST WAF</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 14px;">
+                  <div style="display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-dim);">EDGE NETWORK:</span>
+                    <span style="color: var(--silver);">330+ Global Data Centers</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-dim);">DDOS MITIGATION:</span>
+                    <span style="color: var(--silver);">Volumetric &amp; Layer 7 Protected</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-dim);">BOT MANAGEMENT:</span>
+                    <span style="color: var(--silver);">Turnstile Silent Cryptographic Check</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-dim);">WEBHOOK LATENCY:</span>
+                    <span style="color: var(--silver);">&lt; 2ms Edge Verification</span>
+                  </div>
+                </div>
+                <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+                  <a href="./contact.html" class="btn btn-primary" style="width: 100%;">Deploy With Cloudflare Security →</a>
+                </div>
+              </div>
+
+              <!-- Interactive Edge Simulator -->
+              <div id="cf-edge-simulator"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Bottom Enquiry Banner -->
+    <section class="section">
+      <div class="container" style="text-align: center; max-width: 720px;">
+        <h2 class="section-title">Ready to construct your bot system?</h2>
+        <p style="margin-bottom: 32px;">
+          Send us your required commands, event triggers, and target timeline. We will reply with a detailed technical breakdown and pricing scope.
+        </p>
+        <a class="btn btn-primary" href="./contact.html">
+          <span>Start a Project Discussion</span>
+          <span class="icon-arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Complete Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand-link" href="./index.html">
+            <img src="./assets/img/astral-logo.svg" alt="Astral">
+          </a>
+          <p>
+            Bespoke Discord bot development, automation pipelines, moderation systems, and community infrastructure.
+          </p>
+        </div>
+        <div>
+          <div class="footer-col-title">Systems</div>
+          <ul class="footer-links">
+            <li><a href="./services.html">All Services</a></li>
+            <li><a href="./services.html#bots">Custom Bots</a></li>
+            <li><a href="./services.html#automation">Automation</a></li>
+            <li><a href="./services.html#security">Moderation & Security</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Studio</div>
+          <ul class="footer-links">
+            <li><a href="./work.html">Selected Work</a></li>
+            <li><a href="./process.html">Our Process</a></li>
+            <li><a href="./pricing.html">Pricing Structure</a></li>
+            <li><a href="./about.html">About Astral</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact & Meta</div>
+          <ul class="footer-links">
+            <li><a href="./contact.html">Project Enquiry</a></li>
+            <li><a href="mailto:4xiel95@gmail.com">4xiel95@gmail.com</a></li>
+            <li><a href="https://discord.com" target="_blank" rel="noopener">Discord: xief1e</a></li>
+            <li><a href="./sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span class="dynamic-year">2026</span> Astral. All rights reserved.</div>
+        <div>Engineered with Three.js & Modern Web Standards · Bangladesh & Global</div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initNavigation } from './src/components/navigation.js';
+    import { initMotionSystem } from './src/components/motion.js';
+    import { CloudflareSecuritySystem } from './src/components/cloudflareSecurity.js';
+
+    initNavigation();
+    initMotionSystem();
+    CloudflareSecuritySystem.initEdgeSecuritySimulator('cf-edge-simulator');
+  </script>
+</body>
+</html>

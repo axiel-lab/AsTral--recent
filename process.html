@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Engineering Process — ASTRAL Discord Systems Studio</title>
+  <meta name="description" content="Explore our disciplined 5-phase engineering process for custom Discord bots: Discovery, Architecture, Build, Testing, and Deployment.">
+  <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+  <a class="skip-to-content" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="./index.html" aria-label="Astral Home">
+        <img src="./assets/img/astral-logo.svg" alt="Astral">
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a class="nav-link" href="./index.html">Index</a>
+        <a class="nav-link" href="./services.html">Services</a>
+        <a class="nav-link" href="./work.html">Selected Work</a>
+        <a class="nav-link active" href="./process.html">Process</a>
+        <a class="nav-link" href="./pricing.html">Pricing</a>
+        <a class="nav-link" href="./about.html">About</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div class="cloudflare-badge" title="Edge Protected by Cloudflare Global Anycast WAF">
+          <span class="cf-status-pulse"></span>
+          <span>Cloudflare Shield 100%</span>
+        </div>
+        <a class="header-cta" href="./contact.html">
+          <span>Start a Project</span>
+          <span class="icon-arrow">→</span>
+        </a>
+        <button class="mobile-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <a class="nav-link" href="./index.html">Index</a>
+    <a class="nav-link" href="./services.html">Services</a>
+    <a class="nav-link" href="./work.html">Selected Work</a>
+    <a class="nav-link active" href="./process.html">Process</a>
+    <a class="nav-link" href="./pricing.html">Pricing</a>
+    <a class="nav-link" href="./about.html">About</a>
+    <a class="btn btn-primary" href="./contact.html" style="margin-top: 20px;">Start a Project →</a>
+  </div>
+
+  <main id="main" style="padding-top: calc(var(--nav-height) + 50px);">
+    <section class="section" style="padding-top: 20px;">
+      <div class="container">
+        
+        <!-- Header -->
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="dot"></span>
+            <span>Disciplined Execution Lifecycle</span>
+          </div>
+          <h1 class="section-title" style="font-size: clamp(38px, 5vw, 68px);">
+            From initial brief to <span class="serif-italic">stable shard.</span>
+          </h1>
+          <p class="lead">
+            Good software begins with good questions, not hasty code. We guide every build through a transparent five-stage process designed to eliminate ambiguity and prevent production regressions.
+          </p>
+        </div>
+
+        <!-- Interactive Process Visualizer / Stage Assembly -->
+        <div style="background: #0d0f14; border: 1px solid var(--border); border-radius: 16px; padding: clamp(24px, 4vw, 44px); margin-bottom: 60px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle); padding-bottom: 16px; margin-bottom: 30px; flex-wrap: wrap; gap: 16px;">
+            <div>
+              <span class="eyebrow" style="margin: 0;">Interactive Architecture Progress</span>
+              <h2 style="font-size: 22px; margin-top: 4px;">System Assembly Flow</h2>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--silver-dark);">
+              CLICK A PHASE TO INSPECT DELIVERABLES
+            </div>
+          </div>
+
+          <!-- Phase Tabs -->
+          <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 30px;" id="phase-tabs-container">
+            <button type="button" class="control-pill is-active" data-phase="1" style="justify-content: center; width: 100%; border-radius: 8px; padding: 12px 6px;">
+              <span>01. Discovery</span>
+            </button>
+            <button type="button" class="control-pill" data-phase="2" style="justify-content: center; width: 100%; border-radius: 8px; padding: 12px 6px;">
+              <span>02. Architecture</span>
+            </button>
+            <button type="button" class="control-pill" data-phase="3" style="justify-content: center; width: 100%; border-radius: 8px; padding: 12px 6px;">
+              <span>03. Implementation</span>
+            </button>
+            <button type="button" class="control-pill" data-phase="4" style="justify-content: center; width: 100%; border-radius: 8px; padding: 12px 6px;">
+              <span>04. Hardening</span>
+            </button>
+            <button type="button" class="control-pill" data-phase="5" style="justify-content: center; width: 100%; border-radius: 8px; padding: 12px 6px;">
+              <span>05. Handoff</span>
+            </button>
+          </div>
+
+          <!-- Phase Content Panels -->
+          <div id="phase-content-box" style="background: #12141c; border: 1px solid var(--border-subtle); border-radius: 12px; padding: 32px;">
+            <div class="grid-2" style="gap: 36px; align-items: center;">
+              <div>
+                <div class="card-num" id="phase-meta">PHASE 01 // REQUIREMENTS &amp; WORKFLOW AUDIT</div>
+                <h3 style="font-size: 28px; margin-bottom: 14px;" id="phase-title">Deep Operational Discovery</h3>
+                <p id="phase-desc" style="margin-bottom: 20px;">
+                  We dissect your current server layout, bot conflicts, role permissions, and staff chores before writing a line of code. We ask: What tasks are manual? Where are the security risks? What interactions should feel effortless?
+                </p>
+                <div style="font-family: var(--font-mono); font-size: 12px; color: var(--silver-dark);" id="phase-deliverables">
+                  <strong style="color: var(--silver-bright);">STAGE DELIVERABLES:</strong><br>
+                  • Workflow audit report &amp; friction matrix<br>
+                  • Core user stories (Member, Moderator, Admin)<br>
+                  • Explicit scope boundaries and quote agreement
+                </div>
+              </div>
+              <div style="background: #0a0b10; border: 1px solid var(--border); border-radius: 8px; padding: 24px; font-family: var(--font-mono); font-size: 12px;">
+                <div style="color: var(--silver-dark); margin-bottom: 12px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 6px;">
+                  DISCOVERY CHECKLIST
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 10px; color: var(--silver);">
+                  <div>[✓] Channel topology &amp; category permissions verified</div>
+                  <div>[✓] Gateway intent requirements mapped</div>
+                  <div>[✓] Third-party API rate limits documented</div>
+                  <div>[✓] Edge case identification (alts, spam, unhandled disconnects)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Full Chronological Stage Breakdown -->
+        <div style="display: flex; flex-direction: column;">
+          
+          <!-- Stage 1 -->
+          <div class="process-stage-item">
+            <div class="stage-num">01</div>
+            <div>
+              <h2 style="font-size: 26px; margin-bottom: 10px;">Discovery &amp; Workflow Deconstruction</h2>
+              <p style="margin-bottom: 16px;">
+                Every custom build begins with understanding human interactions, not just tech stacks. We audit your server channels, analyze how members interact, and identify exactly which steps consume the most administrative time.
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 12px; color: var(--silver-dark);">
+                Outcome: Documented specification, timeline estimate, and unambiguous scope boundaries.
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="process-stage-item">
+            <div class="stage-num">02</div>
+            <div>
+              <h2 style="font-size: 26px; margin-bottom: 10px;">Scope &amp; System Architecture</h2>
+              <p style="margin-bottom: 16px;">
+                We draft command hierarchies, interaction tree diagrams, database schemas, and state machines. We verify Discord API rate limits and plan shard boundaries before coding.
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 12px; color: var(--silver-dark);">
+                Outcome: Complete architectural schema, ER diagram, and verified environment requirements.
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="process-stage-item">
+            <div class="stage-num">03</div>
+            <div>
+              <h2 style="font-size: 26px; margin-bottom: 10px;">Design &amp; Implementation</h2>
+              <p style="margin-bottom: 16px;">
+                Development begins with clean, modular, async code (Python or TypeScript). We build custom Discord modals, ephemeral feedback embeds, and resilient background queues. All code is formatted to strict production standards.
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 12px; color: var(--silver-dark);">
+                Outcome: Fully functional staging bot instance running in an isolated test environment.
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 4 -->
+          <div class="process-stage-item">
+            <div class="stage-num">04</div>
+            <div>
+              <h2 style="font-size: 26px; margin-bottom: 10px;">Testing, Edge Cases &amp; Hardening</h2>
+              <p style="margin-bottom: 16px;">
+                We subject the staging bot to rigorous stress testing: simulated concurrent button clicks, gateway reconnect dropouts, expired webhook payloads, and permission hierarchy penetration.
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 12px; color: var(--silver-dark);">
+                Outcome: Zero unhandled promise rejections, automated backoff queues, and certified error logging.
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 5 -->
+          <div class="process-stage-item" style="border-bottom: none;">
+            <div class="stage-num">05</div>
+            <div>
+              <h2 style="font-size: 26px; margin-bottom: 10px;">Deployment, Documentation &amp; Handoff</h2>
+              <p style="margin-bottom: 16px;">
+                We guide the production launch into your active community, configure cloud hosting or provide an isolated Docker bundle, deliver documentation for your staff team, and supply 14-30 days of post-launch stabilization support.
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 12px; color: var(--silver-dark);">
+                Outcome: Smooth production rollout, full source ownership, staff guides, and peace of mind.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="section" style="border-top: 1px solid var(--border-subtle);">
+      <div class="container" style="text-align: center; max-width: 680px;">
+        <h2 class="section-title">Ready for step one?</h2>
+        <p style="margin-bottom: 32px;">
+          Send us a message with your server idea. We'll start with the right questions.
+        </p>
+        <a class="btn btn-primary" href="./contact.html">
+          <span>Start Discovery</span>
+          <span class="icon-arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Complete Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand-link" href="./index.html">
+            <img src="./assets/img/astral-logo.svg" alt="Astral">
+          </a>
+          <p>
+            Bespoke Discord bot development, automation pipelines, moderation systems, and community infrastructure.
+          </p>
+        </div>
+        <div>
+          <div class="footer-col-title">Systems</div>
+          <ul class="footer-links">
+            <li><a href="./services.html">All Services</a></li>
+            <li><a href="./services.html#bots">Custom Bots</a></li>
+            <li><a href="./services.html#automation">Automation</a></li>
+            <li><a href="./services.html#security">Moderation & Security</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Studio</div>
+          <ul class="footer-links">
+            <li><a href="./work.html">Selected Work</a></li>
+            <li><a href="./process.html">Our Process</a></li>
+            <li><a href="./pricing.html">Pricing Structure</a></li>
+            <li><a href="./about.html">About Astral</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact & Meta</div>
+          <ul class="footer-links">
+            <li><a href="./contact.html">Project Enquiry</a></li>
+            <li><a href="mailto:4xiel95@gmail.com">4xiel95@gmail.com</a></li>
+            <li><a href="https://discord.com" target="_blank" rel="noopener">Discord: xief1e</a></li>
+            <li><a href="./sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span class="dynamic-year">2026</span> Astral. All rights reserved.</div>
+        <div>Engineered with Three.js & Modern Web Standards · Bangladesh & Global</div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initNavigation } from './src/components/navigation.js';
+    import { initMotionSystem } from './src/components/motion.js';
+
+    initNavigation();
+    initMotionSystem();
+
+    // Interactive Phase Selector
+    const phases = {
+      1: {
+        meta: 'PHASE 01 // REQUIREMENTS & WORKFLOW AUDIT',
+        title: 'Deep Operational Discovery',
+        desc: 'We dissect your current server layout, bot conflicts, role permissions, and staff chores before writing a line of code. We ask: What tasks are manual? Where are the security risks? What interactions should feel effortless?',
+        deliverables: '<strong style="color: var(--silver-bright);">STAGE DELIVERABLES:</strong><br>• Workflow audit report & friction matrix<br>• Core user stories (Member, Moderator, Admin)<br>• Explicit scope boundaries and quote agreement',
+        checklist: ['[✓] Channel topology & category permissions verified', '[✓] Gateway intent requirements mapped', '[✓] Third-party API rate limits documented', '[✓] Edge case identification (alts, spam, unhandled disconnects)']
+      },
+      2: {
+        meta: 'PHASE 02 // ARCHITECTURE & DATA SCHEMAS',
+        title: 'Technical Specification & Modeling',
+        desc: 'We design the complete interaction tree, database tables, modal inputs, and API webhooks. We model error recovery, state transitions, and rate-limit backoff logic to ensure continuous reliability.',
+        deliverables: '<strong style="color: var(--silver-bright);">STAGE DELIVERABLES:</strong><br>• Relational database schema & indexes<br>• Slash command argument trees & permission matrix<br>• Gateway event handling flowchart',
+        checklist: ['[✓] PostgreSQL / SQLite schema drafted', '[✓] Discord permission bitfield calculator configured', '[✓] Webhook signature verification verified', '[✓] Cache eviction policies established']
+      },
+      3: {
+        meta: 'PHASE 03 // CLEAN ASYNCHRONOUS CODE',
+        title: 'Implementation & Component Engineering',
+        desc: 'We craft modular, strictly-typed code with native Discord interactions: buttons, selects, modals, and embeds. All external API calls feature asynchronous non-blocking dispatch.',
+        deliverables: '<strong style="color: var(--silver-bright);">STAGE DELIVERABLES:</strong><br>• Clean Python / TypeScript codebase<br>• Interactive Discord component handlers<br>• Dedicated staging deployment for client review',
+        checklist: ['[✓] Slash commands registered on staging guild', '[✓] Interactive Discord UI components validated', '[✓] Database queries indexed and tested', '[✓] Shard heartbeat watchdog connected']
+      },
+      4: {
+        meta: 'PHASE 04 // STRESS & FAULT RESILIENCE',
+        title: 'Load Testing & Penetration Checks',
+        desc: 'We simulate heavy concurrent usage, forced Discord gateway disconnections, rapid spam events, and invalid payloads to ensure the bot recovers autonomously without operator intervention.',
+        deliverables: '<strong style="color: var(--silver-bright);">STAGE DELIVERABLES:</strong><br>• Gateway reconnect recovery verification<br>• Rate-limit bucket simulation logs<br>• Security audit & role-escalation defense check',
+        checklist: ['[✓] Rapid button-click debouncing verified', '[✓] WebSocket reconnect reconnects seamlessly', '[✓] Ephemeral message security guards verified', '[✓] Zero unhandled promise exceptions']
+      },
+      5: {
+        meta: 'PHASE 05 // LAUNCH & LIFELONG STABILITY',
+        title: 'Production Handoff & Stabilization',
+        desc: 'We deploy the bot to your production guild, provision cloud hosting or deliver Docker containers, train your moderators on commands, and monitor logs actively for 30 days post-launch.',
+        deliverables: '<strong style="color: var(--silver-bright);">STAGE DELIVERABLES:</strong><br>• Production Dockerfile & environment variables<br>• Moderator command reference cheatsheet<br>• 30 days direct developer warranty & support',
+        checklist: ['[✓] Production slash commands deployed globally', '[✓] Automated daily database snapshots active', '[✓] Staff command guide delivered', '[✓] Health-check webhook reporting to staff']
+      }
+    };
+
+    const phaseBtns = document.querySelectorAll('#phase-tabs-container button');
+    const metaEl = document.getElementById('phase-meta');
+    const titleEl = document.getElementById('phase-title');
+    const descEl = document.getElementById('phase-desc');
+    const delivEl = document.getElementById('phase-deliverables');
+
+    phaseBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        phaseBtns.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+
+        const p = phases[btn.dataset.phase];
+        if (p) {
+          metaEl.textContent = p.meta;
+          titleEl.textContent = p.title;
+          descEl.textContent = p.desc;
+          delivEl.innerHTML = p.deliverables;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
